@@ -126,7 +126,7 @@ async function _generateDocumentation(basePath: string, readmeTemplate: string, 
                 const hasLegacyIds = parsedJson?.legacyIds && parsedJson?.legacyIds.length > 0;
 
                 if (isDeprecated || hasLegacyIds) {
-                    header = '\n### **IMPORTANT NOTE**\n';
+                    header = '### **IMPORTANT NOTE**\n';
 
                     if (isDeprecated) {
                         header += `- **This Feature is deprecated, and will no longer receive any further updates/support.**\n`;
