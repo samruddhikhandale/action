@@ -120,7 +120,7 @@ async function _generateDocumentation(basePath: string, readmeTemplate: string, 
                     urlToConfig = `https://github.com/${srcInfo.owner}/${srcInfo.repo}/blob/main/${basePathTrimmed}/${f}/${metadataFile}`;
                 }
 
-                let header = '\n';
+                let header = '';
                 const isDeprecated = parsedJson?.deprecated;
                 const hasLegacyIds = parsedJson?.legacyIds && parsedJson?.legacyIds.length > 0;
 
