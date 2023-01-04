@@ -4,8 +4,9 @@ import * as path from 'path';
 import { getGitHubMetadata } from './utils';
 
 const FEATURES_README_TEMPLATE = `
-# #{Name}
 #{Header}
+# #{Name}
+
 #{Description}
 
 ## Example Usage
@@ -125,7 +126,7 @@ async function _generateDocumentation(basePath: string, readmeTemplate: string, 
                 const hasLegacyIds = parsedJson?.legacyIds && parsedJson?.legacyIds.length > 0;
 
                 if (isDeprecated || hasLegacyIds) {
-                    header = '\n## **IMPORTANT NOTE**\n';
+                    header = '\n### **IMPORTANT NOTE**\n';
 
                     if (isDeprecated) {
                         header += `- **This Feature is deprecated, and will no longer receive any further updates/support.**\n`;
