@@ -151,7 +151,7 @@ async function _generateDocumentation(basePath: string, readmeTemplate: string, 
                     .replace('#{Version}', version);
 
                 if (header) {
-                    newReadme = header + newReadme;
+                    newReadme = `${header}\n${newReadme}`;
                 }
 
                 // Remove previous readme
